@@ -8,5 +8,8 @@
     "build": "sucrase ./src -d ./dist --transforms typescript,imports"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "sucrase": "^3.10.1",
+    "typescript": "^3.5.3"
+  }
 }
