@@ -9,6 +9,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "nodemon": "^1.19.1",
     "sucrase": "^3.10.1",
     "typescript": "^3.5.3"
   }
