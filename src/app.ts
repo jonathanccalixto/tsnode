@@ -1,4 +1,4 @@
-import express from 'express'
+import express, { Response } from 'express'
 import cors from 'cors'
 import mongoose from 'mongoose'
 
@@ -9,6 +9,7 @@ class App {
     this.express = express()
     this.middlewares()
     this.database()
+    this.routes()
   }
 
   private middlewares (): void {
@@ -19,6 +20,12 @@ class App {
   private database (): void {
     mongoose.connect('mongodb:localhost:27017/tsnode', {
       useNewUrlParser: true
+    })
+  }
+
+  private routes (): void {
+    this.express.get('/', (req, res): Response => {
+      return res.send('Hello World')
     })
   }
 }
